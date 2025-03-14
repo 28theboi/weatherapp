@@ -1,3 +1,7 @@
+//Sanketh Gowda
+//Period 8
+//March 13th, 2025
+//Uses open weather api to give you the weather of the place you choose
 // Get references to DOM elements
 let valueSearch = document.getElementById('valueSearch'); // Input field for city name
 let city = document.getElementById('city'); // Section to display city name and flag
