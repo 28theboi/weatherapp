@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata for the document -->
+    <meta charset="UTF-8"> <!-- Specifies the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper scaling on mobile devices -->
+    <title>Weather App</title> <!-- Title of the webpage -->
+
+    <!-- Link to the external CSS file for styling -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <main>
+        <!-- Form for searching weather by city -->
+        <form action="">
+            <!-- Input field for entering the city name -->
+            <input type="text" autocomplete="off" id="valueSearch" placeholder="Enter city name">
+            
+            <!-- Submit button with a search icon -->
+            <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+
+        <!-- Section to display the weather results -->
+        <section class="result">
+            <!-- City name and country flag -->
+            <figure class="name" id="city">
+                <figcaption>London</figcaption> <!-- Default city name -->
+                <img src="https://flagsapi.com/GB/shiny/32.png" alt="Country flag"> <!-- Default country flag -->
+            </figure>
+
+            <!-- Temperature and weather icon -->
+            <figure class="temperature" id="temperature">
+                <img src="https://openweathermap.org/img/wn/10d@4x.png" alt="Weather icon"> <!-- Default weather icon -->
+                <figcaption>
+                    <span>31</span> <!-- Default temperature -->
+                    <sup>o</sup> <!-- Degree symbol -->
+                </figcaption>
+            </figure>
+
+            <!-- Weather description -->
+            <p class="description">
+                Overcast clouds <!-- Default weather description -->
+            </p>
+
+            <!-- Additional weather details -->
+            <ul>
+                <!-- Cloud percentage -->
+                <li>
+                    <span>Clouds</span>
+                    <i class="fa-solid fa-cloud"></i> <!-- Cloud icon -->
+                    <span id="clouds">98</span>% <!-- Default cloud percentage -->
+                </li>
+
+                <!-- Humidity percentage -->
+                <li>
+                    <span>Humidity</span>
+                    <i class="fa-solid fa-droplet"></i> <!-- Humidity icon -->
+                    <span id="humidity">55</span>% <!-- Default humidity percentage -->
+                </li>
+
+                <!-- Atmospheric pressure -->
+                <li>
+                    <span>Pressure</span>
+                    <i class="fa-solid fa-gauge"></i> <!-- Pressure icon -->
+                    <span id="pressure">1001</span>hPa <!-- Default pressure value -->
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Link to the JavaScript file for functionality -->
+    <script src="app.js"></script>
+</body>
+</html>

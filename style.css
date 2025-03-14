@@ -1,0 +1,128 @@
+/* General body styling */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #dcdcdc 50%, #e9e9e9 50%);
+    font-family: sans-serif;
+}
+
+/* Reset margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container styling */
+main {
+    width: 300px;
+    min-height: 300px;
+    background-color: #f7f7f7;
+    border-radius: 30px;
+    box-shadow: 0 30px 50px rgba(85, 85, 85, 0.3);
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* Form styling */
+main form {
+    border: 1px solid #5553;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 30px;
+}
+
+main form input,
+main form button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    padding: 10px;
+}
+
+/* Result section styling */
+main .result {
+    padding-top: 20px;
+    text-align: center;
+}
+
+main .result .name {
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Weather icon and temperature styling */
+main .temperature img {
+    width: 150px;
+    filter: drop-shadow(0 10px 50px #000);
+}
+
+main .temperature figcaption {
+    font-size: 3em;
+}
+
+/* Weather description styling */
+main .description {
+    padding: 10px 0 30px;
+}
+
+/* Additional weather details (list) */
+main ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+main li {
+    background-color: #2dd695;
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px 10px;
+    background-image: linear-gradient(to bottom, transparent 50%, #0003 50%);
+    font-weight: bold;
+    font-size: small;
+}
+
+main li i {
+    font-size: 2;
+    display: block !important;
+    margin: 20px 0;
+}
+
+/* Specific list item colors */
+main li:nth-child(2) {
+    background-color: #b56291; /* Humidity */
+}
+
+main li:nth-child(3) {
+    background-color: #db9e1a; /* Pressure */
+}
+
+/* Error animation */
+main.error {
+    animation: errorEffect 0.3s linear 1;
+}
+
+@keyframes errorEffect {
+    0% {
+        transform: translate(10px, 5px);
+    }
+    25% {
+        transform: translate(-5px, 0);
+    }
+    50% {
+        transform: translate(8px, 2px);
+    }
+    75% {
+        transform: translate(-2px, 5px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
